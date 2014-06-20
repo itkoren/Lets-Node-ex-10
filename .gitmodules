@@ -1,0 +1,3 @@
+[submodule "examples/scalability"]
+	path = examples/scalability
+	url = https://github.com/itkoren/Lets-Node-exp-scalability.git

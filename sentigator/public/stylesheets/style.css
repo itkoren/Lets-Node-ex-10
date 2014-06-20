@@ -1,0 +1,30 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+input {
+    margin-right: 5px;
+}
+
+.main {
+  padding-top: 100px;
+}
+
+.score {
+    padding: 2px;
+    float: right;
+}
+
+.go {
+    padding: 4px;
+    font-weight: bold;
+}
+
+.well {
+    margin-bottom: 0px;
+}

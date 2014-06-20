@@ -1,0 +1,27 @@
+{
+  "name": "sentiment",
+  "version": "0.0.1",
+  "description": "Performs sentiment analysis on the provided input \"term/s\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "node ./node_modules/mocha/bin/mocha ./test"
+  },
+  "keywords": [
+    "sentiment",
+    "analysis"
+  ],
+  "author": "Itai Koren (@itkoren)",
+  "license": "MIT",
+  "engines": {
+    "node": ">= 0.10.x"
+  },
+  "dependencies": {
+    "require.async":"0.1.x"
+  },
+  "devDependencies": {
+    "mocha":"1.19.x",
+    "chai":"1.9.x",
+    "sinon":"1.10.x",
+    "mockery":"1.4.x"
+  }
+}
