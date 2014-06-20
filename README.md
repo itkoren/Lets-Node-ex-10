@@ -3,7 +3,7 @@ Tenth Exercise (Scaling)
 
 Please complete the following steps:
 
-1. Refactor **"sentigator"** server to use **"[seaport](https://github.com/substack/seaport)"** for port assigning (use **"SPIP"** and **"SPPORT"** process arguments to allow setting the location of the **"[seaport](https://github.com/substack/seaport)"** server from the command line arguments)
+1. Refactor **"sentigator"** server to use **"[seaport](https://github.com/substack/seaport)"** for port assigning (use **"SPIP"** and **"SPPORT"** process arguments to allow setting the location of the **"[seaport](https://github.com/substack/seaport)"** server using command line arguments)
 
 2. Use **"[cluster](http://nodejs.org/api/cluster.html)"** to fork multiple **"sentigator"** instances based on the number of available CPU's (-1). Place the cluster initialization code inside a **"cluster.js"** file in **"sentigator"** root folder and use it to require **"sentigator.js"**
 
