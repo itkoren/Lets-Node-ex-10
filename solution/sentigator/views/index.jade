@@ -1,0 +1,33 @@
+extends layout
+
+block content
+    script(type="text/javascript", src="/javascripts/sentigatorClient.js")
+    div(class="navbar navbar-inverse navbar-fixed-top", role="navigation")
+        div.container
+            div.navbar.navbar-fixed-top.navbar-inverse
+                div.navbar-inner
+                    div.pull-right
+                        a(href="https://github.com/itkoren/sentigator", class="navbar-brand") sentigator
+                
+    div(ng-app="SentigatorApp", ng-controller="SentigatorCtrl")
+        div.jumbotron
+            div.container
+                h1= title
+                p What Would You Like to Search for Today?
+                div
+                    form(ng-submit="sentigator()", class="navbar-form")
+                        div.form-group
+                            input(type="text", ng-model="searchText", placeholder="Type your term here", class="form-control", autofocus)
+                            input(type="submit", value="Send", class="btn btn-success form-control")
+        div(style="display:none", loading-indicator)
+        div(ng-if="items.length", class="container")
+            p "{{prevSearchText}}" was sentigator'ed
+            ul(ng-if="items.length", class="list-group")
+                li(ng-repeat="item in items", class="ng-class:markType(item)")
+                    span(ng-if="item.score", class="score") Score:
+                        span.badge {{item.score}}
+                    span(ng-if="item.text && item.src !== 'Giphy'") {{item.text}}
+                    a(ng-if="item.url && item.src !== 'Giphy'", href="{{item.url}}", class="go") Go
+                    div(ng-if="item.url && item.src === 'UTube'", ng-bind-html="getUtube(item.url)")
+                    div(ng-if="item.url && item.src === 'ITunes'", ng-bind-html="getITunes(item.url)")
+                    div(ng-if="item.url && item.src === 'Giphy'", ng-bind-html="getGiphy(item.url)")
